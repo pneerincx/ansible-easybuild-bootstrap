@@ -53,3 +53,8 @@ by other roles? Options:
    repeatedly include from other roles.
 
 I'm inclined to start with 1 and later choose between 2 and 4.
+
+### Custom EasyBuild configs
+
+How best to integrate custom EasyBuild configs? As separate role per set of
+configs? Are these configs stored alongside the 'normal' configs?
