@@ -4,3 +4,6 @@
   gather_facts: no
   become: yes
   roles: [easybuild]
+  post_tasks:
+    - name: add vagrant user to easybuild group
+      user: name=vagrant groups=easybuild append=yes
