@@ -1,0 +1,6 @@
+---
+- name: deploy easybuild
+  hosts: easybuild
+  gather_facts: no
+  become: yes
+  roles: [easybuild]

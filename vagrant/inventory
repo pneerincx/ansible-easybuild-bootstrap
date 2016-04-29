@@ -1,0 +1,5 @@
+[vagrant]
+default
+
+[easybuild:children]
+vagrant
