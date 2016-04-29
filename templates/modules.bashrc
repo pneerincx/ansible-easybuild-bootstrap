@@ -28,6 +28,9 @@ export EASYBUILD_MODULES_TOOL='Lmod'
 export EASYBUILD_INSTALLPATH="${HPC_ENV_PREFIX}"
 export EASYBUILD_BUILDPATH="${HPC_ENV_PREFIX}/.tmp/easybuild/builds/"
 export EASYBUILD_SOURCEPATH="${HPC_ENV_PREFIX}/sources/"
+export EASYBUILD_UMASK=002
+export EASYBUILD_SET_GID_BIT=1
+export EASYBUILD_STICKY_BIT=1
 export TEST_EASYBUILD_MODULES_TOOL='Lmod'
 #
 # Configure our module tool (Lmod).

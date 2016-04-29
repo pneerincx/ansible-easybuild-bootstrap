@@ -31,7 +31,7 @@
         state=present
 
 - name: create easybuild directories
-  file: path={{ easybuild_root }}/{{ item }} owner=easybuild group=easybuild state=directory
+  file: path={{ easybuild_root }}/{{ item }} owner=easybuild group=easybuild mode='u=rwx,g=rwx,o=rx' state=directory
   with_items:
     - ''
     - custom
@@ -41,7 +41,7 @@
     - sources
 
 - name: configure lmod and easybuild
-  template: src={{ item.src }} dest={{ easybuild_root }}/modules/{{ item.dest}} owner=easybuild group=easybuild
+  template: src={{ item.src }} dest={{ easybuild_root }}/modules/{{ item.dest}} owner=easybuild group=easybuild mode='u=rw,g=rw,o=r'
   with_items:
     - src: lmodrc.lua
       dest: .lmod/lmodrc.lua
@@ -62,7 +62,7 @@
 # EasyBuild config manually. We might want to create some abstraction for
 # this.
 - name: install easybuild
-  shell: . {{ easybuild_root }}/modules/modules.bashrc && python {{ easybuild_root }}/custom/bootstrap_eb.py ${HPC_ENV_PREFIX}
+  shell: . {{ easybuild_root }}/modules/modules.bashrc && umask 0002 && python {{ easybuild_root }}/custom/bootstrap_eb.py ${HPC_ENV_PREFIX}
   args:
     creates: '{{ easybuild_root }}/software/EasyBuild'
   become_user: easybuild
