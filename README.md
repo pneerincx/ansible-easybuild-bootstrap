@@ -19,6 +19,13 @@ Default: `/apps`
 Directory in which to store all EasyBuild and Lmod files.
 
 
+Local deployment with Vagrant
+-----------------------------
+
+Easy deployment on a local virtual machine using Vagrant is provided in the
+[vagrant](vagrant) directory.
+
+
 Todo
 ----
 
