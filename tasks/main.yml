@@ -12,6 +12,7 @@
     - Lmod
     - openssl-devel
     - patch
+    - perl
 
 - name: patch lmod profile
   lineinfile:
