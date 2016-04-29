@@ -61,6 +61,8 @@ by other roles? Options:
 
 I'm inclined to start with 1 and later choose between 2 and 4.
 
+Preferably the final solution should provide idempotency.
+
 ### Custom EasyBuild configs
 
 How best to integrate custom EasyBuild configs? As separate role per set of
