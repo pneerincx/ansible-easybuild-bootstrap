@@ -13,6 +13,7 @@
     - openssl-devel
     - patch
     - perl
+    - git
 
 - name: patch lmod profile
   lineinfile:
