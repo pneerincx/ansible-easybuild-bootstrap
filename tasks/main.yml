@@ -13,6 +13,14 @@
     - openssl-devel
     - patch
     - perl
+    - git
+    - unzip
+    - libX11-devel
+    - libXrender-devel
+    - libXext-devel
+    - mesa-libGL-devel
+    - mesa-libGLU-devel
+    - libXext-devel
 
 - name: patch lmod profile
   lineinfile:
