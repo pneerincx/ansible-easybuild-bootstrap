@@ -21,6 +21,7 @@
     - mesa-libGL-devel
     - mesa-libGLU-devel
     - libXext-devel
+    - libXt-devel
 
 - name: patch lmod profile
   lineinfile:
