@@ -23,6 +23,10 @@
     - mesa-libGLU-devel
     - libXext-devel
     - libXt-devel
+    - readline-devel
+    - readline-static
+    - ncurses-devel
+    - ncurses-static
   when: ansible_os_family == 'RedHat'
 
 - name: Patch Lmod profile
